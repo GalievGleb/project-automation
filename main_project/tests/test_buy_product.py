@@ -5,7 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from Project_Automation.main_project.pages.login_page import Login_page
+from pages.login_page import Login_page
+
 
 def test_select_product():  # создаем метод
     driver = webdriver.Chrome(
