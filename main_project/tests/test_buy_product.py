@@ -12,7 +12,8 @@ def test_select_product():  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
     driver = webdriver.Chrome(
-        executable_path='C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\chromedriver.exe', chrome_options=options)  # Указали директорию в которой находится хром драйвер, для того чтобы мы могли обращаться к браузеру гугл хром
+        executable_path='C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\chromedriver.exe',
+        chrome_options=options)  # Указали директорию в которой находится хром драйвер, для того чтобы мы могли обращаться к браузеру гугл хром
 
     print("Start Test")
 
