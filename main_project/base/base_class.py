@@ -9,7 +9,9 @@ class Base():
         get_url = self.driver.current_url
         print("Current url " + get_url)
 
-         """Method assert word"""
+        """Method assert word"""
 
-    def assert_word(self, word)
-
+    def assert_word(self, word, result):
+        value_word = word.text
+        assert value_word == result
+        print("Good value word")

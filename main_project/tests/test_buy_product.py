@@ -7,7 +7,6 @@ from selenium.webdriver.chrome.options import Options
 
 from pages.login_page import Login_page
 
-
 def test_select_product():  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
