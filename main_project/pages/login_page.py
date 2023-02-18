@@ -35,6 +35,7 @@ class Login_page(Base):
     def get_main_word(self):
         return WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, self.main_word)))
+
     # Action
     def input_user_name(self, user_name):
         self.get_user_name().send_keys(user_name)
