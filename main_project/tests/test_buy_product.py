@@ -5,6 +5,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+from pages.cart_page import Cart_page
+from pages.client_information_page import Client_information_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
 
@@ -20,7 +22,14 @@ def test_select_product():  # создаем метод
 
     login = Login_page(driver)
     login.authorization()
+
     mp = Main_page(driver)
     mp.select_product()
+
+    cp = Cart_page(driver)
+    cp.click_checkout_button()
+
+    cip = Client_information_page(driver)
+    cip.input_information()
 
     time.sleep(5)
