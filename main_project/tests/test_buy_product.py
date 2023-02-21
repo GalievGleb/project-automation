@@ -7,8 +7,10 @@ from selenium.webdriver.chrome.options import Options
 
 from pages.cart_page import Cart_page
 from pages.client_information_page import Client_information_page
+from pages.finish_page import Finish_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
+from pages.payment import Payment_page
 
 
 def test_select_product():  # создаем метод
@@ -31,5 +33,11 @@ def test_select_product():  # создаем метод
 
     cip = Client_information_page(driver)
     cip.input_information()
+
+    p = Payment_page(driver)
+    p.click_finish_button()
+
+    f = Finish_page(driver)
+    f.finish()
 
     time.sleep(5)

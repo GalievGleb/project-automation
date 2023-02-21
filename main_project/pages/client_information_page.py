@@ -12,10 +12,10 @@ class Client_information_page(Base):
         self.driver = driver
 
     # Locators
-    first_name = "[id='first-name']"
-    last_name = "[id='last-name']"
-    postal_code = "[id='postal-code']"
-    continue_button = "[id='continue']"
+    first_name = "//input[@id='first-name']"
+    last_name = "//input[@id='last-name']"
+    postal_code = "//input[@id='postal-code']"
+    continue_button = "//input[@id='continue']"
 
     # Getters
 
