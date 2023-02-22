@@ -13,7 +13,7 @@ from pages.main_page import Main_page
 from pages.payment import Payment_page
 
 
-def test_select_product():  # создаем метод
+def test_link_about():  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
     driver = webdriver.Chrome(
@@ -26,19 +26,7 @@ def test_select_product():  # создаем метод
     login.authorization()
 
     mp = Main_page(driver)
-    mp.select_product()
-
-    cp = Cart_page(driver)
-    cp.click_checkout_button()
-
-    cip = Client_information_page(driver)
-    cip.input_information()
-
-    p = Payment_page(driver)
-    p.click_finish_button()
-
-    f = Finish_page(driver)
-    f.finish()
+    mp.select_menu_about()
 
     print("Finish Test")
     time.sleep(1)
