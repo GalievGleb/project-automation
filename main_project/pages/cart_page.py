@@ -24,7 +24,7 @@ class Cart_page(Base):
 
     def click_checkout_button(self):
         self.get_checkout_button().click()
-        print("Click select product 1")
+        print("Click checkout button")
 
     # Methods
     def product_confirmation(self):
