@@ -16,7 +16,7 @@ from pages.payment import Payment_page
 
 
 @pytest.mark.order(3)
-def test_buy_product_1():  # создаем метод
+def test_buy_product_1(set_grope):  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
     driver = webdriver.Chrome(
@@ -48,7 +48,7 @@ def test_buy_product_1():  # создаем метод
 
 
 @pytest.mark.order(3)
-def test_buy_product_2():  # создаем метод
+def test_buy_product_2(set_grope):  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
     driver = webdriver.Chrome(
@@ -71,7 +71,7 @@ def test_buy_product_2():  # создаем метод
 
 
 @pytest.mark.order(2)
-def test_buy_product_3():  # создаем метод
+def test_buy_product_3(set_grope):  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
     driver = webdriver.Chrome(
