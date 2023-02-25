@@ -1,5 +1,5 @@
 import time
-
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -16,6 +16,7 @@ from pages.payment import Payment_page
 
 
 # @pytest.mark.order(3)
+@allure.description("Test buy product 1")
 def test_buy_product_1(set_grope):  # создаем метод
     options = Options()
     options.add_experimental_option("excludeSwitches", ['enable-logging'])
